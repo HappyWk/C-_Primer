@@ -1,0 +1,36 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558 
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "task g++",
+            "command": "D:\\3PartThree\\8VSCode\\2VSCodeConfiguration\\mingw64\\bin\\g++.exe", /*修改成自己bin目录下的g++.exe，这里的路径和电脑里复制的文件目录有一点不一样，这里是两个反斜杠\\*/
+            "args": [
+                "-g",
+                // 这里存放.cpp文件
+                "${file}",
+                // "D:\\3PartThree\\8VSCode\\PROJECT\\ESSENTIAL_C++\\CHAPTER4\\example1\\stack.cpp",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe",
+                "-I",
+                // 这里存放项目文件的目录
+                "D:\\3PartThree\\8VSCode\\PROJECT\\ESSENTIAL_C++\\CHAPTER5\\example2", /*修改成自己放c/c++项目的文件夹，这里的路径和电脑里复制的文件目录有一点不一样，这里是两个反斜杠\\*/
+                "-std=c++17"
+            ],
+            "options": {
+                "cwd": "D:\\3PartThree\\8VSCode\\2VSCodeConfiguration\\mingw64\\bin" /*修改成自己bin目录，这里的路径和电脑里复制的文件目录有一点不一样，这里是两个反斜杠\\*/
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build",
+            // 从这里开始是自己添加的
+            "presentation": { 
+                "panel": "new" //默认为“shared“表示共享，改成new之后每个进程创建新的端口
+            }
+            // 添加这一整块代码块
+        }
+    ]
+}
