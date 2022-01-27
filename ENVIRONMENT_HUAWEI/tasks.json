@@ -11,12 +11,12 @@
             "-g",
             "${file}",
             // 这里需要放自己写的cpp文件，比如：
-            "D:\\SOFTWARE-SECTION3\\VSCode\\PROJECT\\ESSENTIAL_Cpp\\CHAPTER4\\example1\\stack.cpp",
+ 
             "-o",
             "${fileDirname}\\${fileBasenameNoExtension}.exe",
             "-I",
             //修改成自己放c/c++项目的文件夹，这里的路径和电脑里复制的文件目录有一点不一样，这里是两个反斜杠\\
-            "D:\\SOFTWARE-SECTION3\\VSCode\\PROJECT\\ESSENTIAL_Cpp\\CHAPTER4",
+            "D:\\SOFTWARE-SECTION3\\VSCode\\PROJECT\\Cpp_Primer\\CHAPTER1",
             "-std=c++17"
         ],
         "options": {
