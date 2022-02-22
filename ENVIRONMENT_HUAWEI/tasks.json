@@ -4,30 +4,31 @@
     "version": "2.0.0",
     "tasks": [
         {
-        "type": "shell",
-        "label": "task g++",
-        "command": "D:\\SOFTWARE-SECTION3\\VSCode\\VSCodeConfiguration\\mingw64\\bin\\g++.exe",	/*修改成自己bin目录下的g++.exe，这里的路径和电脑里复制的文件目录有一点不一样，这里是两个反斜杠\\*/
-        "args": [
-            "-g",
-            "${file}",
-            // 这里需要放自己写的cpp文件，比如：
- 
-            "-o",
-            "${fileDirname}\\${fileBasenameNoExtension}.exe",
-            "-I",
-            //修改成自己放c/c++项目的文件夹，这里的路径和电脑里复制的文件目录有一点不一样，这里是两个反斜杠\\
-            "D:\\SOFTWARE-SECTION3\\VSCode\\PROJECT\\Cpp_Primer\\CHAPTER1",
-            "-std=c++17"
-        ],
-        "options": {
-            "cwd": "D:\\SOFTWARE-SECTION3\\VSCode\\VSCodeConfiguration\\mingw64\\bin"	/*修改成自己bin目录，这里的路径和电脑里复制的文件目录有一点不一样，这里是两个反斜杠\\*/
-        },
-        "problemMatcher":[
-            "$gcc"
-        ],
-        "group": "build",
-        
+            "type": "shell",
+            "label": "task g++",
+            "command": "D:\\SOFTWARE-SECTION3\\VSCode\\VSCodeConfiguration\\mingw64\\bin\\g++.exe", /*修改成自己bin目录下的g++.exe，这里的路径和电脑里复制的文件目录有一点不一样，这里是两个反斜杠\\*/
+            "args": [
+                "-g",
+                "${file}",
+                // 这里需要放自己写的cpp文件，比如：
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe",
+                "-I",
+                //修改成自己放c/c++项目的文件夹，这里的路径和电脑里复制的文件目录有一点不一样，这里是两个反斜杠\\
+                "D:\\SOFTWARE-SECTION3\\VSCode\\PROJECT\\Cpp_Primer\\CHAPTER2",
+                "-std=c++17"
+            ],
+            "options": {
+                "cwd": "D:\\SOFTWARE-SECTION3\\VSCode\\VSCodeConfiguration\\mingw64\\bin" /*修改成自己bin目录，这里的路径和电脑里复制的文件目录有一点不一样，这里是两个反斜杠\\*/
+            },
+            //* 从这里开始是自己添加的/* 添加这一整块代码块
+            "presentation": {
+                "panel": "new" //默认为“shared“表示共享，改成new之后每个进程创建新的端口
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build",
         }
     ]
 }
-
